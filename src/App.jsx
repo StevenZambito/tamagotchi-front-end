@@ -4,7 +4,7 @@ import { Link, Route, Switch } from 'react-router-dom'
 
 export function App() {
   const [petItems, setPetItems] = useState([])
-  const [newPetItem, setNewPetItem] = useState('')
+  const [newPetItemName, setNewPetItemName] = useState('')
 
   useEffect(async function () {
     const response = await axios.get(
@@ -19,9 +19,16 @@ export function App() {
 
     const response = await axios.post(
       'https://steven-zambito-tamagotchi.herokuapp.com/api/Pets',
-      { name: newPetItem }
+      { name: newPetItemName }
     )
-    console.log(response.data)
+
+    const newPetItem = response.data
+
+    const newPetItems = [...petItems, newPetItem]
+
+    setPetItems(newPetItems)
+
+    setNewPetItemName('')
   }
 
   return (
@@ -67,9 +74,9 @@ export function App() {
             <input
               type="text"
               placeholder="Create a new pet"
-              value={newPetItem}
+              value={newPetItemName}
               onChange={event => {
-                setNewPetItem(event.target.value)
+                setNewPetItemName(event.target.value)
               }}
             />
           </form>
