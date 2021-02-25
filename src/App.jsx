@@ -3,64 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 
 export function App() {
-  const [petItems, setPetItems] = useState([
-    {
-      id: 0,
-      name: 'hi',
-      birthday: '2021-02-25T19:19:43.360Z',
-      hungerLevel: 0,
-      happinessLevel: 0,
-      playtimes: [
-        {
-          id: 0,
-          when: '2021-02-25T19:19:43.360Z',
-          petId: 0,
-        },
-      ],
-      feedings: [
-        {
-          id: 0,
-          when: '2021-02-25T19:19:43.360Z',
-          petId: 0,
-        },
-      ],
-      scoldings: [
-        {
-          id: 0,
-          when: '2021-02-25T19:19:43.360Z',
-          petId: 0,
-        },
-      ],
-    },
-    {
-      id: 1,
-      name: 'hi again',
-      birthday: '2021-02-25T19:19:43.360Z',
-      hungerLevel: 0,
-      happinessLevel: 0,
-      playtimes: [
-        {
-          id: 1,
-          when: '2021-02-25T19:19:43.360Z',
-          petId: 1,
-        },
-      ],
-      feedings: [
-        {
-          id: 1,
-          when: '2021-02-25T19:19:43.360Z',
-          petId: 1,
-        },
-      ],
-      scoldings: [
-        {
-          id: 1,
-          when: '2021-02-25T19:19:43.360Z',
-          petId: 1,
-        },
-      ],
-    },
-  ])
+  const [petItems, setPetItems] = useState([])
+  const [newPetItem, setNewPetItem] = useState('')
 
   useEffect(async function () {
     const response = await axios.get(
@@ -110,7 +54,14 @@ export function App() {
           </ul>
           <form>
             <p>hi</p>
-            <input type="text" placeholder="Create a new pet" />
+            <input
+              type="text"
+              placeholder="Create a new pet"
+              value={newPetItem}
+              onChange={event => {
+                setNewPetItem(event.target.value)
+              }}
+            />
           </form>
         </main>
         <footer>
