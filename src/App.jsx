@@ -1,7 +1,11 @@
+// @ts-nocheck
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 
+// export function Pet() {
+
+// }
 export function App() {
   const [petItems, setPetItems] = useState([])
   const [newPetItemName, setNewPetItemName] = useState('')
