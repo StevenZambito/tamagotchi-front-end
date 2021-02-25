@@ -3,9 +3,10 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 
-// export function Pet() {
+export function PetComponent(props) {
+  return <li>{props.name}</li>
+}
 
-// }
 export function App() {
   const [petItems, setPetItems] = useState([])
   const [newPetItemName, setNewPetItemName] = useState('')
@@ -70,7 +71,8 @@ export function App() {
           <h2>The Tomogatchis in question:</h2>
           <ul>
             {petItems.map(petItem => (
-              <li key={petItem.id}>{petItem.name}</li>
+              // <li key={petItem.id}>{petItem.name}</li>
+              <PetComponent key={petItem.id} name={petItem.name} />
             ))}
           </ul>
           <form onSubmit={handleNewPetItem}>
