@@ -1,5 +1,5 @@
 :root {
-  font: 16px / 1 sans-serif;
+  font: 24px / 1 sans-serif;
 }
 
 html {
@@ -7,6 +7,71 @@ html {
 }
 
 body {
-  margin: 0;
   min-height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Comfortaa';
+  background-color: rgb(119, 167, 164);
+}
+
+.app {
+  border: solid red;
+  min-height: 100vh;
+}
+
+header h1 {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  border: solid pink;
+  padding: 2rem;
+  margin: 0;
+}
+
+main h2 {
+  text-align: center;
+}
+
+main {
+  border: solid orange;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: solid yellow;
+  margin-bottom: 4rem;
+  cursor: pointer;
+}
+
+li {
+  border: solid green;
+  margin: 0.7em;
+}
+
+input {
+  border: none;
+  padding: 0.3em 0.2em 0;
+  color: #074863;
+  font-size: 1em;
+  line-height: 1.5em;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+input:focus {
+  outline: 0;
+  background-color: #fff;
+  opacity: 1;
+}
+
+footer {
+  padding: 0;
+  border: solid purple;
 }
