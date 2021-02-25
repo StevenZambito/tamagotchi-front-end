@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 
 export function App() {
@@ -60,6 +61,12 @@ export function App() {
       ],
     },
   ])
+
+  useEffect(async function () {
+    const response = await axios.get(
+      'https://steven-zambito-tamagotchi.herokuapp.com/api/Pets'
+    )
+  }, [])
   return (
     <>
       <div className="app">
@@ -99,6 +106,7 @@ export function App() {
             ))}
           </ul>
           <form>
+            <p>hi</p>
             <input type="text" placeholder="Create a new pet" />
           </form>
         </main>
