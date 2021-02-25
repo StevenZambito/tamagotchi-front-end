@@ -66,7 +66,10 @@ export function App() {
     const response = await axios.get(
       'https://steven-zambito-tamagotchi.herokuapp.com/api/Pets'
     )
+
+    setPetItems(response.data)
   }, [])
+
   return (
     <>
       <div className="app">
