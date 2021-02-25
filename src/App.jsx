@@ -14,6 +14,16 @@ export function App() {
     setPetItems(response.data)
   }, [])
 
+  async function handleNewPetItem(event) {
+    event.preventDefault()
+
+    const response = await axios.post(
+      'https://steven-zambito-tamagotchi.herokuapp.com/api/Pets',
+      { name: newPetItem }
+    )
+    console.log(response.data)
+  }
+
   return (
     <>
       <div className="app">
@@ -52,7 +62,7 @@ export function App() {
               <li key={petItem.id}>{petItem.name}</li>
             ))}
           </ul>
-          <form>
+          <form onSubmit={handleNewPetItem}>
             <p>hi</p>
             <input
               type="text"
