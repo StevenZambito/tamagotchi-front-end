@@ -1,5 +1,6 @@
 import { Link, Route, Switch } from 'react-router-dom'
 import { PetPage } from './pages/PetPage'
+import { PetDetailsPage } from './pages/PetDetailsPage'
 
 export function App() {
   return (
@@ -19,6 +20,9 @@ export function App() {
           <Switch>
             <Route exact path="/">
               <PetPage />
+            </Route>
+            <Route exact path="/:id">
+              <PetDetailsPage />
             </Route>
             <Route path="*">Not Found</Route>
           </Switch>

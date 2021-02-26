@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { PetComponent } from '../components/PetComponent'
 
 export function PetPage() {
