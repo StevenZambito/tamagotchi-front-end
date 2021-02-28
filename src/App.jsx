@@ -22,10 +22,12 @@ export function App() {
             <Route exact path="/">
               <PetPage />
             </Route>
-            <Route exact path="/:id">
+            <Route exact path="/pet/:id">
               <PetDetailsPage />
             </Route>
-            <Route path="*">Not Found</Route>
+            <Route path="*">
+              <p>Not Found</p>
+            </Route>
           </Switch>
         </main>
         <footer>
