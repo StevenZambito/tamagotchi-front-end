@@ -1,3 +1,10 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
 export function PetComponent(props) {
-  return <li>{props.name}</li>
+  return (
+    <li>
+      <Link to={`/pet/${props.id}`}>{props.name}</Link>
+    </li>
+  )
 }

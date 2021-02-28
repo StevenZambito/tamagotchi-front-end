@@ -39,6 +39,7 @@ export function PetPage() {
       <ul className="tamagotchi-list">
         {petItems.map(petItem => (
           <PetComponent
+            id={petItem.id}
             key={petItem.id}
             name={petItem.name}
             reloadItems={loadAllPetItems}
