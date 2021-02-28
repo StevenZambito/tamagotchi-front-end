@@ -36,10 +36,8 @@ export function PetPage() {
   }
   return (
     <>
-      <h2>The Tomogatchis in question:</h2>
-      <ul>
+      <ul className="tamagotchi-list">
         {petItems.map(petItem => (
-          // <li key={petItem.id}>{petItem.name}</li>
           <PetComponent
             key={petItem.id}
             name={petItem.name}
@@ -48,7 +46,6 @@ export function PetPage() {
         ))}
       </ul>
       <form onSubmit={handleNewPetItem}>
-        <p>hi</p>
         <input
           type="text"
           placeholder="Create a new pet"

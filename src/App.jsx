@@ -1,6 +1,7 @@
 import { Link, Route, Switch } from 'react-router-dom'
 import { PetPage } from './pages/PetPage'
 import { PetDetailsPage } from './pages/PetDetailsPage'
+import tamagotchibackground from './images/tamagotchiwallpaper.jpg'
 
 export function App() {
   return (
@@ -11,7 +12,7 @@ export function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/">Go Home</Link>
+                <Link to="/">Home</Link>
               </li>
             </ul>
           </nav>

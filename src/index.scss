@@ -2,8 +2,34 @@
   font: 24px / 1 sans-serif;
 }
 
+// @font-face {
+//   font-family: 'MyFont';
+//   src: local('MyFont'), url('./fonts/tamagotchi.ttf') format('ttf');
+// }
+
 html {
   height: 100%;
+  background: url(./images/tamagotchiwallpaper.jpg) no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  color: rgb(135, 130, 252);
+}
+
+header {
+  text-align: center;
+  background-color: rgb(195, 253, 128);
+  // font-family: 'MyFont';
+  margin: 0;
+  padding: 0.7rem;
+  opacity: 0.9;
 }
 
 body {
@@ -12,21 +38,23 @@ body {
   padding: 0;
   color: #fff;
   font-family: 'Comfortaa';
-  background-color: rgb(119, 167, 164);
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
 }
 
 .app {
-  border: solid red;
   min-height: 100vh;
 }
 
-header h1 {
-  text-align: center;
-  font-weight: 300;
-  text-transform: uppercase;
-  border: solid pink;
-  padding: 2rem;
+nav ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
+  font-size: 0.7rem;
+  // margin-top: 0.9rem;
 }
 
 main h2 {
@@ -34,35 +62,36 @@ main h2 {
 }
 
 main {
-  border: solid orange;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-ul {
+.tamagotchi-list {
   list-style: none;
-  margin: 0;
+  margin-top: 1em;
   padding: 0;
+  background-color: rgb(160, 201, 248);
   border: solid yellow;
-  margin-bottom: 4rem;
-  cursor: pointer;
+  border-radius: 0.3rem;
 }
 
-li {
-  border: solid green;
+.tamagotchi-list li {
   margin: 0.7em;
+  cursor: pointer;
 }
 
 input {
   border: none;
+  border-radius: 0.3rem;
   padding: 0.3em 0.2em 0;
+  margin: 0;
   color: #074863;
   font-size: 1em;
   line-height: 1.5em;
   background-color: #fff;
-  opacity: 0.5;
+  background-color: rgb(253, 128, 210);
 }
 
 input:focus {
@@ -71,7 +100,56 @@ input:focus {
   opacity: 1;
 }
 
-footer {
-  padding: 0;
-  border: solid purple;
+form {
+  margin-top: 1rem;
+}
+
+.pet-div-info {
+  background-color: rgb(185, 219, 176);
+  border-radius: 0.3rem;
+  padding: 0.8rem;
+}
+
+.tama-shell {
+  border: solid 0.07rem black;
+  border-radius: 7rem;
+  padding: 4rem 2rem 2rem 2rem;
+  margin-top: 1rem;
+  background-color: rgb(253, 145, 125);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tama-border {
+  margin: 0;
+  border-radius: 0.3rem;
+  padding: 0.7rem;
+  background-color: rgb(132, 253, 98);
+}
+
+.tama-main-buttons button {
+  padding: 0.4rem;
+  margin: 1rem;
+  border-radius: 4rem;
+  font-size: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+
+  background-color: rgb(85, 173, 168);
+}
+
+.tama-delete-button button {
+  padding: 0.4rem;
+  border-radius: 4rem;
+  margin-right: 0.3rem;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: rgb(85, 173, 168);
+}
+
+#pet-name {
+  text-align: center;
+  color: black;
 }
