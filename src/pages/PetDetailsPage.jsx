@@ -7,22 +7,21 @@ import moment from 'moment'
 export function PetDetailsPage() {
   const [pet, setPet] = useState({})
 
-  const params = useParams()
-  console.log(params)
+  const { id } = useParams()
 
   const history = useHistory()
 
   useEffect(async () => {
     const response = await axios.get(
-      `https://steven-zambito-tamagotchi.herokuapp.com/api/Pets/${params.id}`
+      `https://steven-zambito-tamagotchi.herokuapp.com/api/Pets/${id}`
     )
 
     setPet(response.data)
-  }, [])
+  }, [id])
 
   const addPlaytime = async () => {
     const response = await axios.post(
-      `https://steven-zambito-tamagotchi.herokuapp.com/api/Pets/${params.id}/playtimes`
+      `https://steven-zambito-tamagotchi.herokuapp.com/api/Pets/${id}/playtimes`
     )
 
     setPet(response.data)
@@ -30,7 +29,7 @@ export function PetDetailsPage() {
 
   const addFeeding = async () => {
     const response = await axios.post(
-      `https://steven-zambito-tamagotchi.herokuapp.com/api/Pets/${params.id}/feedings`
+      `https://steven-zambito-tamagotchi.herokuapp.com/api/Pets/${id}/feedings`
     )
 
     setPet(response.data)
@@ -38,7 +37,7 @@ export function PetDetailsPage() {
 
   const addScolding = async () => {
     const response = await axios.post(
-      `https://steven-zambito-tamagotchi.herokuapp.com/api/Pets/${params.id}/scoldings`
+      `https://steven-zambito-tamagotchi.herokuapp.com/api/Pets/${id}/scoldings`
     )
 
     setPet(response.data)
@@ -46,7 +45,7 @@ export function PetDetailsPage() {
 
   const deletePet = async () => {
     const response = await axios.delete(
-      `https://steven-zambito-tamagotchi.herokuapp.com/api/Pets/${params.id}`
+      `https://steven-zambito-tamagotchi.herokuapp.com/api/Pets/${id}`
     )
     setPet(response.data)
 

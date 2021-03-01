@@ -25,11 +25,6 @@ export function PetPage() {
       { name: newPetItemName }
     )
 
-    // const newPetItem = response.data
-
-    // const newPetItems = [...petItems, newPetItem]
-
-    // setPetItems(newPetItems)
     loadAllPetItems()
 
     setNewPetItemName('')

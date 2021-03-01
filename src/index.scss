@@ -2,10 +2,10 @@
   font: 24px / 1 sans-serif;
 }
 
-// @font-face {
-//   font-family: 'MyFont';
-//   src: local('MyFont'), url('./fonts/tamagotchi.ttf') format('ttf');
-// }
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url('./fonts/tamagotchi.ttf') format('truetype');
+}
 
 html {
   height: 100%;
@@ -21,12 +21,12 @@ h1 {
   margin: 0;
   padding: 0;
   color: rgb(135, 130, 252);
+  font-family: MyFont;
 }
 
 header {
   text-align: center;
   background-color: rgb(195, 253, 128);
-  // font-family: 'MyFont';
   margin: 0;
   padding: 0.7rem;
   opacity: 0.9;
@@ -54,7 +54,20 @@ nav ul {
   padding: 0;
   margin: 0;
   font-size: 0.7rem;
-  // margin-top: 0.9rem;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+header a:hover {
+  color: rgb(135, 130, 252);
+}
+
+a:hover {
+  color: greenyellow;
 }
 
 main h2 {
@@ -73,17 +86,20 @@ main {
   margin-top: 1em;
   padding: 0;
   background-color: rgb(160, 201, 248);
-  border: solid yellow;
+  border: solid rgb(253, 128, 210);
   border-radius: 0.3rem;
+  width: 18rem;
+  text-align: center;
 }
 
 .tamagotchi-list li {
   margin: 0.7em;
+  color: rgb(253, 128, 210);
   cursor: pointer;
 }
 
 input {
-  border: none;
+  border: solid rgb(160, 201, 248);
   border-radius: 0.3rem;
   padding: 0.3em 0.2em 0;
   margin: 0;
@@ -102,6 +118,15 @@ input:focus {
 
 form {
   margin-top: 1rem;
+}
+
+footer p {
+  text-align: center;
+  color: rgb(135, 130, 252);
+  background-color: rgb(195, 253, 128);
+  margin: 0;
+  padding: 1rem;
+  font-size: 0.8rem;
 }
 
 .pet-div-info {
@@ -140,7 +165,6 @@ form {
   font-size: 0.5rem;
   font-weight: bold;
   cursor: pointer;
-
   background-color: rgb(85, 173, 168);
 }
 
