@@ -22,6 +22,7 @@ h1 {
   padding: 0;
   color: rgb(135, 130, 252);
   font-family: MyFont;
+  text-shadow: rgb(85, 173, 168);
 }
 
 header {
@@ -180,4 +181,16 @@ footer p {
 #pet-name {
   text-align: center;
   color: black;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
 }
