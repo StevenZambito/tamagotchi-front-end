@@ -1,6 +1,6 @@
 # [Tamagotchi](https://tamagotchi-front-end-stevensmacbook.netlify.app/)
 
-<img src="src/assets/Tamagotchi.gif">
+<img src="./public/src/assets/Tamagotchi.gif">
 
 ## Objectives
 
